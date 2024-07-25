@@ -10,22 +10,22 @@ export interface mobileNav {
 export const links: links[] = [
   {
     name: "Website Design",
-    link: "#",
+    link: "#websitedesign",
   },
   {
     name: "Graphic Design",
-    link: "#",
+    link: "#graphicdesign",
   },
   {
     name: "Shopify Stores",
-    link: "#",
+    link: "#shopify",
   },
   {
     name: "Brands",
-    link: "#",
+    link: "#brands",
   },
   {
     name: "Pricing",
-    link: "#",
+    link: "#pricing",
   },
 ];

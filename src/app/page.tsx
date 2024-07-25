@@ -2,9 +2,12 @@ import React from "react";
 import Navbar from "@/components/navbar";
 import WebsiteDesign from "./websiteDesign";
 import GrapichDesign from "./grapichDesign";
+import Brands from "./brands";
+import Services from "./services";
 import ShopifyStore from "./shopifyStore";
 import { Spotlight } from "@/components/ui/spotlight";
 import SliderOne from "@/components/ui/slider";
+import FAQS from "./faq";
 const page = () => {
   return (
     <div className="w-full h-screen md:items-center md:justify-center  bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-x-hidden">
@@ -36,6 +39,9 @@ const page = () => {
           <WebsiteDesign />
           <GrapichDesign />
           <ShopifyStore />
+          <Brands />
+          <Services />
+          <FAQS />
         </div>
       </div>
     </div>

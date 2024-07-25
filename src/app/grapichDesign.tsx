@@ -5,7 +5,7 @@ import { ThreeDCardDemo } from "@/snippets/3d-card-snippet";
 import { EvervaultCardDemo } from "@/snippets/Evervault-card";
 const grapichDesign = () => {
   return (
-    <div>
+    <div id="websitedesign">
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         <h1 className="text-4xl  md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-sky-200 bg-opacity-50">
           Graphic Design
@@ -16,7 +16,7 @@ const grapichDesign = () => {
         </p>
       </div>
 
-      <div className="items-center md:flex justify-center md:mx-auto md:space-x-10">
+      <div className="items-center md:flex flex-wrap justify-center w-full gap-4 ">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

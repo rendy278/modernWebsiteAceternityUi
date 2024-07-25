@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+import { ReactNode } from "react";
 import { imageSlider } from "@/constants/caraousel";
 import { useMediaQuery } from "react-responsive";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const SliderOne: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
+  const [isClient, setIsClient] = useState<boolean>(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -40,17 +41,19 @@ const SliderOne: React.FC = () => {
   return (
     <div className="space-x-4">
       <Slider {...settings}>
-        {imageSlider.map((slide, index) => (
-          <div key={index} className="px-2">
-            <Image
-              src={slide.img}
-              width={500}
-              height={500}
-              alt={`Slide ${index + 1}`}
-              className="rounded-xl"
-            />
-          </div>
-        ))}
+        {imageSlider.map(
+          (slide, index): ReactNode => (
+            <div key={index} className="px-2">
+              <Image
+                src={slide.img}
+                width={500}
+                height={500}
+                alt={`Slide ${index + 1}`}
+                className="rounded-xl"
+              />
+            </div>
+          )
+        )}
       </Slider>
     </div>
   );
