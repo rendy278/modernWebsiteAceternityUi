@@ -5,7 +5,7 @@ import GrapichDesign from "./grapichDesign";
 import Brands from "./brands";
 import Services from "./services";
 import ShopifyStore from "./shopifyStore";
-import Planssec from "./planssec";
+import Price from "./price";
 import { Spotlight } from "@/components/ui/spotlight";
 import SliderOne from "@/components/ui/slider";
 import FAQS from "./faq";
@@ -43,7 +43,7 @@ const page = () => {
           <Brands />
           <Services />
           <FAQS />
-          <Planssec />
+          <Price />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const planssec = () => {
+const price = () => {
   return (
     <div className="mt-8">
       <h1
@@ -15,4 +15,4 @@ const planssec = () => {
   );
 };
 
-export default planssec;
+export default price;
