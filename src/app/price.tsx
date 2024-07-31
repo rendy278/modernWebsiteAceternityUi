@@ -1,6 +1,22 @@
+import React from "react";
 import { plans } from "@/constants/plans";
 import { Check } from "lucide-react";
-const PlanCard: React.FC = ({ plan }) => {
+
+interface Plan {
+  name: string;
+  price: string;
+  features: string[];
+  description: string;
+  button: string;
+  style: string;
+}
+
+interface PlanCardProps {
+  plan: Plan;
+}
+
+// Komponen PlanCard
+const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
   return (
     <div
       className={`max-w-sm p-6 m-4 border border-gray-200 rounded-lg shadow-lg ${plan.style}`}
@@ -23,7 +39,7 @@ const PlanCard: React.FC = ({ plan }) => {
   );
 };
 
-// Price component
+// Komponen Price
 const Price: React.FC = () => {
   return (
     <div className="py-20" id="pricing">
@@ -36,8 +52,8 @@ const Price: React.FC = () => {
         Choose your plan
       </h1>
       <div className="flex flex-wrap justify-center">
-        {plans.map((plan) => (
-          <PlanCard key={plan.index} plan={plan} />
+        {plans.map((plan, index) => (
+          <PlanCard key={index} plan={plan} />
         ))}
       </div>
     </div>

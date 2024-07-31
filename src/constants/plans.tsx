@@ -1,13 +1,4 @@
-interface plans {
-  index: number;
-  name: string;
-  price: string;
-  features: string[];
-  style: string;
-  description: string;
-  button: string;
-}
-export const plans: plans[] = [
+export const plans = [
   {
     index: 0,
     name: "Basic",
