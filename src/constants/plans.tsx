@@ -7,7 +7,7 @@ interface plans {
   description: string;
   button: string;
 }
-const plans: plans[] = [
+export const plans: plans[] = [
   {
     index: 0,
     name: "Basic",

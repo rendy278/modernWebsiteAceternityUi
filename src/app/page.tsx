@@ -9,6 +9,7 @@ import Price from "./price";
 import { Spotlight } from "@/components/ui/spotlight";
 import SliderOne from "@/components/ui/slider";
 import FAQS from "./faq";
+import Footer from "@/components/footer";
 const page = () => {
   return (
     <div className="w-full h-screen md:items-center md:justify-center  bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-x-hidden">
@@ -46,6 +47,7 @@ const page = () => {
           <Price />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
