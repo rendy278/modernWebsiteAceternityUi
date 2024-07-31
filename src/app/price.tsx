@@ -1,6 +1,6 @@
 import { plans } from "@/constants/plans";
 import { Check } from "lucide-react";
-const PlanCard: React.FC<{ plan: plans }> = ({ plan }) => {
+const PlanCard: React.FC = ({ plan }) => {
   return (
     <div
       className={`max-w-sm p-6 m-4 border border-gray-200 rounded-lg shadow-lg ${plan.style}`}
@@ -16,7 +16,7 @@ const PlanCard: React.FC<{ plan: plans }> = ({ plan }) => {
         ))}
       </ul>
       <p className="mb-4">{plan.description}</p>
-      <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+      <button className="px-4 py-2 font-bold text-white bg-neutral-500 rounded hover:bg-neutral-700">
         {plan.button}
       </button>
     </div>
