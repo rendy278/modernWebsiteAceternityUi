@@ -1,9 +1,14 @@
 "use client";
 import Particles from "react-tsparticles";
+import { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback, useMemo } from "react";
 
-const ParticlesComponent = (props) => {
+interface ParticlesComponentProps {
+  id?: string;
+}
+
+const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
   const options = useMemo(() => {
     return {
       interactivity: {
@@ -37,7 +42,7 @@ const ParticlesComponent = (props) => {
           enable: true,
           distance: 200,
           color: "#ffffff",
-          width: 3, // warna garis penghubung partikel (putih)
+          width: 3, // ketebalan garis penghubung partikel
         },
         move: {
           enable: true,
@@ -53,8 +58,8 @@ const ParticlesComponent = (props) => {
     };
   }, []);
 
-  const particlesInit = useCallback((engine) => {
-    loadSlim(engine);
+  const particlesInit = useCallback(async (engine: Engine): Promise<void> => {
+    await loadSlim(engine);
   }, []);
 
   return (
