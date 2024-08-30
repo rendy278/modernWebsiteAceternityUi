@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     setIsActive(isActive);
   };
   return (
-    <nav className="p-6 md:p-10 flex items-center justify-between z-50">
+    <nav className="p-6 fixed bg-black/[0.91] w-full  flex items-center justify-between z-50">
       <Link href="/" className="">
         <Image
           priority
