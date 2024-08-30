@@ -10,9 +10,10 @@ import { Spotlight } from "@/components/ui/spotlight";
 import SliderOne from "@/components/ui/slider";
 import FAQS from "./faq";
 import Footer from "@/components/footer";
+
 const page = () => {
   return (
-    <div className="w-full h-screen md:items-center md:justify-center  bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-x-hidden">
+    <div className="w-full  h-full z-2 md:items-center md:justify-center overflow-x-hidden">
       <Navbar />
       <Spotlight className="hidden md:flex  md:-top-80" fill="white" />
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
