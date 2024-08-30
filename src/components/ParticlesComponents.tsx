@@ -8,6 +8,10 @@ const ParticlesComponent = (props) => {
     return {
       interactivity: {
         events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
           onHover: {
             enable: true,
             mode: "repulse",
@@ -32,7 +36,8 @@ const ParticlesComponent = (props) => {
         links: {
           enable: true,
           distance: 200,
-          color: "#ffffff", // warna garis penghubung partikel (putih)
+          color: "#ffffff",
+          width: 3, // warna garis penghubung partikel (putih)
         },
         move: {
           enable: true,
@@ -42,7 +47,7 @@ const ParticlesComponent = (props) => {
           value: { min: 0.3, max: 0.7 },
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 4, max: 3 },
         },
       },
     };
@@ -54,7 +59,7 @@ const ParticlesComponent = (props) => {
 
   return (
     <Particles
-      className="absolute w-full h-screen"
+      className="absolute w-full -z-1 h-screen"
       id={props.id}
       init={particlesInit}
       options={options}

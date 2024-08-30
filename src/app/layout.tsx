@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 
 import ParticlesComponent from "@/components/ParticlesComponents";
+import Navbar from "@/components/navbar";
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} bg-black/[0.96] antialiased bg-grid-white/[0.02] `}
       >
+        <Navbar />
         <ParticlesComponent id="tsparticles" />
         {children}
       </body>
